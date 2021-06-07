@@ -9,9 +9,12 @@ jobs:
   job_1:
     name: Simple bash test
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+       keyword: ["", "MJK", "many words", "bad" ]
     steps:
       - uses: actions/checkout@v2
 
       - name: Run the script
-        run: bash/simple_script.sh
+        run: bash/simple_script.sh ${{ matrix.keyword }}
 
