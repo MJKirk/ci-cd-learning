@@ -5,6 +5,9 @@ jobs:
     name: Simple bash test
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout the code
+        uses: actions/checkout@v2
+
       - name: Check the script runs
         run: bash/simple_script.sh
         
