@@ -1,0 +1,10 @@
+name: Bash testing
+on: push
+jobs:
+  job_1:
+    name: Simple bash test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check the script runs
+        run: bash/simple_script.sh
+        
