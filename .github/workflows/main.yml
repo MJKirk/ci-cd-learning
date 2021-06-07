@@ -1,5 +1,10 @@
-name: Bash testing
-on: push
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events
+  push
+
 jobs:
   job_1:
     name: Simple bash test
@@ -7,6 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
-      - name: Check the script runs
+      - name: Run the script
         run: bash/simple_script.sh
-        
+
